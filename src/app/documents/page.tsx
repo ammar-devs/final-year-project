@@ -1,5 +1,4 @@
-const DocumentsPage
- = () => {
+const DocumentsPage = () => {
     return ( 
         <div>
             <p>documents page</p>
@@ -7,5 +6,4 @@ const DocumentsPage
      );
 }
  
-export default DocumentsPage
-;
+export default DocumentsPage;
