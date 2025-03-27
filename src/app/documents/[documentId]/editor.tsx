@@ -20,6 +20,7 @@ import StarterKit from '@tiptap/starter-kit'
 import { TooltipPortal } from '@radix-ui/react-tooltip';
 
 import { useEditorStore } from '@/store/use-editor-store';
+import { FontSizeExtension } from '@/extensions/font-size';
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -56,6 +57,7 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontSizeExtension,
       Link.configure({
         openOnClick: false,
         autolink: true,
