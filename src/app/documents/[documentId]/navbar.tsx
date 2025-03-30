@@ -90,9 +90,9 @@ export const Navbar = () => {
 
     return (
         <nav className="flex items-center justify-between">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-1 items-center">
                 <Link href="/">
-                    <Image src="/logo.png" alt="Logo" width={50} height={50}/>
+                    <Image src="/logo1.png" alt="Logo" width={70} height={70}/>
                 </Link>
                 <div className="flex flex-col">
                     <DocumentInput />
