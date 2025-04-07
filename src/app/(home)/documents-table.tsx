@@ -34,26 +34,26 @@ export const DocumentsTable = ({
             ) : (
                 <Table>
                     <TableHeader>
-                        <TableRow className="">
+                        <TableRow>
                             <TableHead>Name</TableHead>
                             <TableHead>&nbsp;</TableHead>
                             <TableHead className="hidden md:table-cell">Shared</TableHead>
                             <TableHead className="hidden md:table-cell">Created at</TableHead>
                         </TableRow>
                     </TableHeader>
-                    {documents.length === 0 ? (
-                        <TableRow className="hover:bg-transparent">
-                            <TableCell colSpan={4} className="h-24 text-center text-muted-foreground">
-                                No documents found
-                            </TableCell>
-                        </TableRow>
-                    ) : (
-                        <TableBody>
-                            {documents.map((document) => (
+                    <TableBody>
+                        {documents.length === 0 ? (
+                            <TableRow className="hover:bg-transparent">
+                                <TableCell colSpan={4} className="h-24 text-center text-muted-foreground">
+                                    No documents found
+                                </TableCell>
+                            </TableRow>
+                        ) : (
+                            documents.map((document) => (
                                 <DocumentRow key={document._id} document={document} />
-                            ))}
-                        </TableBody>
-                    )}
+                            ))
+                        )}
+                    </TableBody>
                 </Table>
             )}
             <div className="flex items-center justify-center">

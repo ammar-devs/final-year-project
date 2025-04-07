@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import { useSearchParam } from "@/hooks/use-search-param";
 import { Navbar } from "./navbar";
 import { TemplatesGallery } from "./templates-gallery";
 import { usePaginatedQuery } from "convex/react";
@@ -9,10 +10,11 @@ import { api } from "../../../convex/_generated/api";
 import { DocumentsTable } from "./documents-table";
 
 const Home = () => {
+  const [search] = useSearchParam();
   const {results,
         status,
         loadMore
-  } = usePaginatedQuery(api.documents.get, {}, { initialNumItems: 5 })
+  } = usePaginatedQuery(api.documents.get, { search }, { initialNumItems: 5 })
 
   return (
     <div className="min-h-screen flex flex-col">
